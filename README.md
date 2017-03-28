@@ -26,14 +26,14 @@ In terms of delivery, these are the requirements:
 # The Project    
 The project consists of a JEE webapp.  
 Your goal is to create both a client and an administration panel for a meeting room booking app. 
-Every member should be able to book a room for a while at the date and time he wants or when the room is available.
-The client is like a dashboard for each meeting room where a member can view when it's free. A member can also book directly on the dashboard by clicking on an available date.
+Any member should be able to book a room for a specific duration at the date and time of his choice or whenever the room is available.
+Each meeting room has a dedicated dashboard where anyone can view and book (potentially, this dashboard would be displayed on a tablet in front of each room). 
 
 In particular, the following items will be implemented:  
 
 **Admin panel:**
   * Create & edit a new member: name, email, birthdate, uuid
-  * Create & edit a new meeting room: name, a picture, max number of people, uuid
+  * Create & edit a new meeting room: name, picture, capacity (X persons), equipment (Screen, whiteboard), uuid
   * Book a meeting room for a given time at a given date with constraints
   * See which room is free
   * Invite members to the meeting room
@@ -45,16 +45,18 @@ In particular, the following items will be implemented:
   * Book a meeting room
 
 A **member** can be edited. It has both a name, an email and a birthdate. Each user also has a unique identifier (uuid).
-A **meeting room** has a name, a picture, a max people capacity and an unique identifier. It may have more attributes ;)
-You'll need to implement an algorithm to book a room with given constraints like:
-  - I need a room for X persons
-  - I need 2 hours for my meeting
-  - I need a TV to display content /a whiteboard
-  - I prefer in the morning
+
+A **meeting room** has a name, a picture, a capacity and an unique identifier. It may have more attributes ;)
+You will need to implement a set of business rules and constraints to book a room like:
+  - I need a room for X people
+  - I need it for Y hours and Z minutes
+  - I need a TV to display content
+  - I need a whiteboard
+  - Preferably in the morning
   - As soon as possible / Next week / next month
-  - I prefer the room 1 / I prefer the room 1 or 3
-  
-Some contraints combination may not be possible, so you'll need to inform the user and purpose a best solution...
+  - Preferably in room 1 / Preferably in room 1 or 3
+
+Some contraints combination may not be possible, so you will need to inform the user and propose a better solution or alternative...
 You don't need to implement security like login or user account at the moment.
 We provided you with the front pages, **even though you might still have to edit them in some way**, it's only a starter.
 
