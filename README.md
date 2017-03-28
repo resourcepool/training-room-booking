@@ -34,11 +34,10 @@ In particular, the following items will be implemented:
 **Admin panel:**
   * Create & edit a new member: name, email, birthdate, uuid
   * Create & edit a new meeting room: name, a picture, max number of people, uuid
-  * Book a meeting room for a given time at a given date
+  * Book a meeting room for a given time at a given date with constraints
   * See which room is free
   * Invite members to the meeting room
-  * Send emails to members invited to a meeting
-
+  * Send emails to members invited to a meeting (ICS card to link in a calendar)
 
 **Client panel:**
   * View specific meeting room calendar
@@ -46,8 +45,16 @@ In particular, the following items will be implemented:
   * Book a meeting room
 
 A **member** can be edited. It has both a name, an email and a birthdate. Each user also has a unique identifier (uuid).
-A **meeting room** has a name, a picture, a max people capacity and an unique identifier.
-
+A **meeting room** has a name, a picture, a max people capacity and an unique identifier. It may have more attributes ;)
+You'll need to implement an algorithm to book a room with given constraints like:
+  - I need a room for X persons
+  - I need 2 hours for my meeting
+  - I need a TV to display content /a whiteboard
+  - I prefer in the morning
+  - As soon as possible / Next week / next month
+  - I prefer the room 1 / I prefer the room 1 or 3
+  
+Some contraints combination may not be possible, so you'll need to inform the user and purpose a best solution...
 You don't need to implement security like login or user account at the moment.
 We provided you with the front pages, **even though you might still have to edit them in some way**, it's only a starter.
 
