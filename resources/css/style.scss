@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: #fcfcfc;
+
+  #wrapper {
+    min-height: 100%;
+    margin-bottom: -90px;
+
+    &:after {
+      content: "";
+      display: block;
+      height: 90px;
+    }
+  }
+
+  input, select {
+    border-radius: 0px !important;
+  }
+
+  .calendar-panel {
+    padding-top: 10px;
+  }
+
+  .hour-widget {
+    display: flex;
+    flex-direction: row;
+    .flex-1 {
+      flex: 1 1 0px;
+    }
+    .flex-2 {
+      flex: 2 1 0px;
+    }
+  }
+
+  .navbar {
+    height: 50px;
+    ul.navbar-top-links {
+      height: 100%;
+      li.dropdown {
+        display: inline-block;
+        height: 100%;
+        a.navlink {
+          height: 100%;
+          padding: 15px;
+        }
+
+        .dropdown-user {
+          min-width: 250px;
+          li {
+            width: 100%;
+            a {
+              line-height: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .huge {
+    font-size: 3em;
+    line-height: 1.2em;
+  }
+  .huge-label {
+    font-size: 1.3em;
+    line-height: 1em;
+  }
+
+  .panel-green {
+    border-color: #0C0;
+    .panel-heading {
+      color: white;
+      background-color: #8dc95f;
+    }
+  }
+
+  .panel-yellow {
+    border-color: #F60;
+    .panel-heading {
+      color: white;
+      background-color: #E5AD1A;
+    }
+  }
+
+  .panel-blue {
+    border-color: #9ad2ff;
+    .panel-heading {
+      color: white;
+      background-color: #83ccf7;
+    }
+  }
+
+  .footer {
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #f5f5f5;
+    padding: 20px;
+
+    .logo {
+      height: 40px;
+    }
+
+  }
+
+  .btn {
+    border-radius: 0px !important;
+  }
+
+  #dashboard {
+    height: 100%;
+    width: 100%;
+    background: #2e6da4;
+    position: relative;
+    font-family: 'Maven Pro', 'Open Sans', Arial;
+    display: flex;
+    flex-direction: row;
+    h1 {
+      color: white;
+      margin: 15px 0;
+      font-family: 'Open Sans', Arial;
+      font-weight: 300;
+      flex: 1 1 50px;
+    }
+    #calendar-container {
+      flex: 9 1 0px;
+      #calendar {
+        padding: 10px;
+        background: #fefefe;
+        border-radius: 5px;
+        max-height: 100vh;
+        margin-bottom: 15px;
+      }
+    }
+
+    .half {
+      flex: 2 1 0px;
+      max-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .half-2 {
+      flex: 1 1 0px;
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+
+    .flex-1 {
+      flex: 1 1 0px;
+    }
+
+  }
+
+}

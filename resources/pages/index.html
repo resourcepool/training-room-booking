@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Meeting Rooms Agenda</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+
+    <!-- FullCalendar.io -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.3.0/fullcalendar.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top container-fluid" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Meeting Rooms Agenda</a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle navlink" data-toggle="dropdown" href="#">
+                    <i class="fa fa-gear fa-fw"></i> Gestion <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="add_event.html"><i class="fa fa-edit fa-fw"></i> Ajouter un évènement</a>
+                    </li>
+                    <li><a href="add_member.html"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="page-wrapper" class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Panneau d'administration</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-4">
+                <!-- /.panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-user fa-fw"></i> Gestion des membres
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>Nom</th>
+                                            <th>Email</th>
+                                            <th>Birthdate</th>
+                                            <th class="text-right">Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Lortola</td>
+                                            <td>lortola@e-biz.fr</td>
+                                            <td>10/02/1988</td>
+                                            <td class="text-right">
+                                                <a href="#" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alebel</td>
+                                            <td>alebel@e-biz.fr</td>
+                                            <td>11/07/1991</td>
+                                            <td class="text-right">
+                                                <a href="#" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kbottero</td>
+                                            <td>kbottero@e-biz.fr</td>
+                                            <td>20/12/1978</td>
+                                            <td class="text-right">
+                                                <a href="#" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>rlarroque</td>
+                                            <td>rlarroque@e-biz.fr</td>
+                                            <td>18/03/1992</td>
+                                            <td class="text-right">
+                                                <a href="#" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>hdelabatte</td>
+                                            <td>hdelabatte@e-biz.fr</td>
+                                            <td>10/02/1916</td>
+                                            <td class="text-right">
+                                                <a href="#" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>gnostrenoff</td>
+                                            <td>gnostrenoff@e-biz.fr</td>
+                                            <td>04/10/1991</td>
+                                            <td class="text-right">
+                                                <a href="#" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>hbernardi</td>
+                                            <td>hbernardi@e-biz.fr</td>
+                                            <td>13/04/1992</td>
+                                            <td class="text-right">
+                                                <a href="#" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>oduvoid</td>
+                                            <td>oduvoid@e-biz.fr</td>
+                                            <td>13/04/1992</td>
+                                            <td class="text-right">
+                                                <a href="#" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>fpchalopin</td>
+                                            <td>fpchalopin@e-biz.fr</td>
+                                            <td>13/04/1992</td>
+                                            <td class="text-right">
+                                                <a href="#" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>jmagloire</td>
+                                            <td>jmagloire@e-biz.fr</td>
+                                            <td>13/04/1992</td>
+                                            <td class="text-right">
+                                                <a href="#" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="text-center">
+                                        <ul class="pagination">
+                                            <li><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-8 -->
+            <div class="col-lg-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-calendar fa-fw"></i> Calendar
+                    </div>
+                    <div class="panel-body" id="agendas">
+
+                        <div class="text-right">
+                            <a href="add_event.html" class="btn btn-lg btn-success"><i class="fa fa-plus"></i> Add new event</a>
+                        </div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#room1" aria-controls="room1" role="tab"
+                                                                      data-toggle="tab">Salle 1</a></li>
+                            <li role="presentation"><a href="#room2" aria-controls="room2" role="tab" data-toggle="tab">Salle
+                                2</a></li>
+                            <li role="presentation"><a href="#room3" aria-controls="room3" role="tab" data-toggle="tab">Salle
+                                3</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active calendar-panel" id="room1">
+                                <div id="calendar"></div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane calendar-panel" id="room2">
+                                <div id="calendar2"></div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane calendar-panel" id="room3">
+                                <div id="calendar3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+            <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<footer class="footer">
+    <div class="container">
+        <div class="row text-center">
+            Resourcepool &bullet; 2017
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- FullCalendar.io -->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js'></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.3.0/fullcalendar.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        // For the example
+        var day = new Date(Date.now());
+        day.setHours(12);
+        day.setMinutes(0);
+        // End example
+
+        moment.locale('fr');
+
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next',
+                center: 'title',
+                right: 'agendaWeek,listWeek,listDay'
+            },
+            businessHours: {
+                dow: [1, 2, 3, 4, 5], // Monday - Friday
+                start: '09:00',
+                end: '20:00'
+            },
+            views: {
+                agendaWeek: {buttonText: 'Agenda semaine'},
+                listDay: {buttonText: 'Liste jour'},
+                listWeek: {buttonText: 'Liste semaine'}
+            },
+
+            defaultView: 'listWeek',
+            navLinks: true, // can click day/week names to navigate views
+            weekends: false,
+            locale: 'fr',
+            defaultDate: Date.now(),
+            weekNumberCalculation: 'ISO',
+            minTime: "09:00:00",
+            maxTime: "20:00:00",
+            height: 400,
+            editable: false,
+            events: [
+                {
+                    title: 'DUP',
+                    start: moment(day).subtract(1, 'days').subtract(4, 'hours'),
+                    end: moment(day).subtract(1, 'days').subtract(2, 'hours')
+                },
+                {
+                    title: 'Long Event',
+                    start: day,
+                    end: moment(day).add(2, 'hours'),
+                    member: "hbernardi"
+                },
+                {
+                    id: 999,
+                    title: 'Sprint planning meeting',
+                    start: '2017-03-29T16:00:00',
+                    end: '2017-03-29T18:00:00',
+                    member: "lortola"
+                },
+                {
+                    title: 'Meeting',
+                    start: '2017-03-30T10:30:00',
+                    end: '2017-03-30T12:30:00',
+                    member: "alebel"
+                }
+            ],
+            eventRender: function (event, element) {
+                if (event.member) {
+                    element.children(".fc-content").append("<div><small>" + event.member + "</small></div>");
+                    element.children(".fc-widget-content").last().append(" <small>" + event.member + "</small>");
+                }
+            }
+        });
+
+        $('#calendar2, #calendar3').fullCalendar({
+            header: {
+                left: 'prev,next',
+                center: 'title',
+                right: 'agendaWeek,listWeek,listDay'
+            },
+            businessHours: {
+                dow: [1, 2, 3, 4, 5], // Monday - Friday
+                start: '09:00',
+                end: '20:00'
+            },
+            views: {
+                agendaWeek: {buttonText: 'Agenda semaine'},
+                listDay: {buttonText: 'Liste jour'},
+                listWeek: {buttonText: 'Liste semaine'}
+            },
+
+            defaultView: 'listWeek',
+            navLinks: true, // can click day/week names to navigate views
+            weekends: false,
+            locale: 'fr',
+            defaultDate: Date.now(),
+            weekNumberCalculation: 'ISO',
+            minTime: "09:00:00",
+            maxTime: "20:00:00",
+            height: 400,
+            editable: true,
+            events: []
+        });
+    });
+</script>
+
+</body>
+
+</html>

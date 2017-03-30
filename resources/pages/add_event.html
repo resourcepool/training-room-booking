@@ -7,112 +7,223 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Mood of the month</title>
-
+    <title>Meeting rooms agenda</title>
     <!-- Bootstrap CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+
 
     <!-- Custom CSS -->
     <link href="../css/style.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
 </head>
 
 <body>
 
-    <div id="wrapper">
+<div id="wrapper">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top container-fluid" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Meeting Rooms Agenda</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top container-fluid" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Meeting rooms agenda</a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle navlink" data-toggle="dropdown" href="#">
+                    <i class="fa fa-gear fa-fw"></i> Gestion <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="add_event.html"><i class="fa fa-edit fa-fw"></i> Ajouter un évènement</a>
+                    </li>
+                    <li><a href="add_member.html"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="page-wrapper" class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Ajouter un évènement</h1>
             </div>
-            <!-- /.navbar-header -->
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+                <!-- /.panel -->
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <form action="" method="post" class="">
+                                <div class="col-xs-12"><h3>Réservation manuelle</h3></div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="title">Objet de la réservation</label>
+                                        <input type="text" class="input-lg form-control" id="title"
+                                               placeholder="Objet de la réservation">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="member">Membre</label>
+                                        <select class="input-lg form-control" id="member" placeholder="Membre">
+                                            <option value="">--------</option>
+                                            <option value="1">lortola</option>
+                                            <option value="1">alebel</option>
+                                            <option value="1">hbernardi</option>
+                                            <option value="1">etc...</option>
+                                        </select>
+                                    </div>
 
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle navlink" data-toggle="dropdown" href="#">
-                        <i class="fa fa-gear fa-fw"></i> Gestion <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="add_event.html"><i class="fa fa-edit fa-fw"></i> Ajouter un évènement</a>
-                        </li>
-                        <li><a href="add_member.html"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+                                    <div class="form-group">
+                                        <label for="member">Salle</label>
+                                        <select class="input-lg form-control" id="room" placeholder="Salle">
+                                            <option value="0">Sans préférence</option>
+                                            <option value="1">Salle 1</option>
+                                            <option value="2">Salle 2</option>
+                                            <option value="3">Salle 3</option>
+                                        </select>
+                                    </div>
 
-        <div id="page-wrapper" class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Ajouter un membre</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <!-- /.panel -->
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <form action="" method="post" class="">
-                                        <div class="form-group">
-                                            <label for="name">Nom</label>
-                                            <input type="text" class="input-lg form-control" id="name" placeholder="Nom">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="email">Adresse Email</label>
-                                            <input type="email" class="input-lg form-control" id="email" placeholder="Adresse Email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="date">Date de naissance</label>
-                                            <input type="text" class="input-lg form-control" id="date" placeholder="JJ/MM/AAAA">
+                                    <div class="form-group">
+                                        <label for="datepicker">Horaire</label>
+
+                                        <div class="ia-widget">
+                                            <select class="input-lg form-control" id="select-widget">
+                                                <option>Le plus tôt possible</option>
+                                                <option>La semaine prochaine</option>
+                                                <option>Le mois prochain</option>
+                                                <option value="4">Choisir date/horaire</option>
+                                            </select>
                                         </div>
 
-                                        <div class="text-right">
-                                            <button type="submit" class="btn btn-lg btn-primary">Enregistrer</button>
+                                        <div class="hour-widget hidden">
+                                            <input class="input-lg form-control flex-2" type="text" id="datepicker"
+                                                   placeholder="JJ/MM/AAAA"/>
+                                            <select class="input-lg form-control flex-1" placeholder="Heure">
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                                <option>17</option>
+                                                <option>18</option>
+                                                <option>19</option>
+                                            </select>
+                                            <select class="input-lg form-control flex-1" placeholder="Minute">
+                                                <option>00</option>
+                                                <option>15</option>
+                                                <option>30</option>
+                                                <option>45</option>
+                                            </select>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- /.row -->
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="duree">Durée</label>
+                                        <select class="input-lg form-control" id="duree" placeholder="Durée">
+                                            <option value="30">0h30</option>
+                                            <option value="60">1h00</option>
+                                            <option value="90">1h30</option>
+                                            <option value="120">2h00</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="people">Nombre de participants</label>
+                                        <select class="input-lg form-control" id="people"
+                                                placeholder="Nombre de participants">
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>~15</option>
+                                            <option>~20</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Besoins supplémentaires</label>
+                                        <div class="form-group">
+                                            <label><input type="checkbox" value="tv"> Télévision</label><br>
+                                            <label><input type="checkbox" value="whiteboard"> Tableau blanc</label><br>
+                                            <label><input type="checkbox" value="pc"> PC</label><br>
+                                            <label><input type="checkbox" value="ethernet"> Internet via
+                                                ethernet</label><br>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <button type="submit" class="btn btn-lg btn-primary">Enregistrer</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <!-- /.panel-body -->
+                        <!-- /.row -->
                     </div>
-                    <!-- /.panel -->
+                    <!-- /.panel-body -->
                 </div>
-                <!-- /.col-lg-12 -->
+                <!-- /.panel -->
             </div>
-            <!-- /.row -->
+            <!-- /.col-lg-12 -->
         </div>
-        <!-- /#page-wrapper -->
-
+        <!-- /.row -->
     </div>
-    <!-- /#wrapper -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row text-center">
-                <img src="../img/ebusiness.png" class="logo" alt=""> &bullet; 2017
-            </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<footer class="footer">
+    <div class="container">
+        <div class="row text-center">
+            Resourcepool &bullet; 2017
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- jQuery -->
-    <script src="../js/jquery-3.1.1.min.js"></script>
+<!-- jQuery -->
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../js/bootstrap.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- JQUERY UI -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+
+        $("#select-widget").on("change", function () {
+            if ($(this).val() == 4) {
+                $(".hour-widget").removeClass("hidden");
+            } else {
+                $(".hour-widget").addClass("hidden");
+            }
+        });
+
+    });
+</script>
 
 </body>
 
