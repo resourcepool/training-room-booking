@@ -59,6 +59,7 @@ You will need to implement a set of business rules and constraints to book a roo
 Some contraints combination may not be possible, so you will need to inform the user and propose a better solution or alternative...
 You don't need to implement security like login or user account at the moment.
 We provided you with the front pages, **even though you might still have to edit them in some way**, it's only a starter.
+We also use a library called fullcalendar.io tu display all data in a calendar. You need to read the doc and adapt it to your project.
 
 ## Setup environment
 
@@ -96,6 +97,8 @@ We provided you with some content to help you bootstrap your work.
 Pages:
   - index.html
   - dashboard.html
+  - add_event.html
+  - add_member.html
 
 # Bonus
 All is done on day 3?
