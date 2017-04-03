@@ -20,8 +20,9 @@ Do not hesitate to try out eXtreme Programming concepts such as Pair Programming
 In terms of delivery, these are the requirements:
    * Clean & commented code
    * Use of the whole JEE stack is allowed (JSP, Servlet, JSTL, JSF?, JPA, JTA, EJB, ...)
-   * Use of EclipseLink ORM is allowed
+   * Use of Hibernate ORM is allowed
    * Use of Spring is not allowed
+   * Use of Maven is not allowed
 
 # The Project    
 The project consists of a JEE webapp.  
@@ -104,6 +105,7 @@ Pages:
 All is done on day 3?
 Here are a few features we as a customer would have loved to have available.
  * Link with Google calendar
+ * Add a recommendation engine in case a room is not available according to the provided rules
  * Send notification emails (reminders)
  * Implement front validation with jQuery
  * Implement backend tests
