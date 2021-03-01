@@ -15,10 +15,10 @@ Every day, the team will be able to attend a retrospective at the time of their 
  * The global workflow efficiency
 
 In terms of team work, you are free to try anything you want.  
-Do not hesitate to try out eXtreme Programming concepts such as Pair Programming, Code Reviews, Test-Driven Development, and take the time to plan important parts of your project in common.
+Do not hesitate to try out eXtreme Programming concepts such as Pair Programming, Code Reviews, Test-Driven Development, and take the time to plan important parts of your project in common. However, the only thing your "customer" is asking for, is for your "Proof Of Concept" to work... Code Quality wont be as important as it usually is.
 
 In terms of delivery, these are the requirements:
-   * Clean & commented code
+   * Clean code
    * Use of the whole JEE stack is allowed (JSP, Servlet, JSTL, JSF?, JPA, JTA, EJB, ...)
    * Use of Hibernate ORM is allowed
    * Use of Spring is not allowed
@@ -64,8 +64,8 @@ We also use a library called fullcalendar.io tu display all data in a calendar. 
 
 ## Setup environment
 
-### MySQL Database
-First, install a local **PostgreSQL** server & a SQL administration tool (Adminer or the Intellij Datasource plugin).
+### SQL Database
+First, install a local **PostgreSQL** server & a SQL administration tool (Adminer or the Intellij Datasource tool).
 
 ### Your IDE
 For this exercise, we recommend you use IntelliJ.
